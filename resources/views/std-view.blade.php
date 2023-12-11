@@ -27,6 +27,7 @@
                 <th scope="col">Email</th>
                 <th scope="col">Password</th>
                 <th scope="col">Delete</th>
+                <th scope="col">Edit</th>
             </tr>
         </thead>
         <tbody>
@@ -39,6 +40,7 @@
                 <td>{{$value->email}}</td>
                 <td>{{$value->password}}</td>
                 <td><a href="{{url('/')}}/std/dlt/{{$value->id}}">Delete</a></td>
+                <td><a href="{{url('/')}}/std/edit/{{$value->id}}">Edit</a></td>
                 
             </tr>
             @endforeach

@@ -33,6 +33,8 @@ Route::get('/std/view', [formController::class, 'std_view']);
 // passing the id through route and calling the method 
 // named std_dlt from controller class to dlt the data  
 Route::get('/std/dlt/{id}', [formController::class, 'std_dlt']);
+Route::get('/std/edit/{id}', [formController::class, 'std_edit']);
+Route::post('/std/update/{id}', [formController::class, 'std_update']);
 
 
 

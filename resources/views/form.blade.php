@@ -15,29 +15,30 @@
 
 <body>
     <div class="container mt-5">
-        <h1>Registration form</h1>
+        <h1>{{$title}}</h1>
 
         @php
             // print_r($errors->all());
+            // dd($data);
         @endphp 
-        <form action="{{url('/')}}/form" class="form-group" method="POST" >
+        <form action="{{$url}}" class="form-group" method="POST" >
             @csrf
             <label for="name">Name</label>
-            <input type="text" name="name" class="form-control" value="{{old('name')}}">
+            <input type="text" name="name" class="form-control" value="{{$data->name}}">
             <span class="text-danger">
                 @error('name')
                     {{$message}}
                 @enderror
             </span><br>
             <label for="email">Email</label>
-            <input type="email" name="email" class="form-control" value="{{old('email')}}">
+            <input type="email" name="email" class="form-control" value="{{$data->email}}">
             <span class="text-danger">
                 @error('email')
                     {{$message}}
                 @enderror
             </span><br>
             <label for="password">Password</label>
-            <input type="password" name="password" class="form-control" value="{{old('password')}}">
+            <input type="password" name="password" class="form-control" value="{{$data->password}}">
             <span class="text-danger">
                 @error('password')
                     {{$message}}
